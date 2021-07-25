@@ -1,0 +1,31 @@
+<% layout('/layout/boilerplate') %>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Your Blogs by you</h1>
+        <p>
+            <b><i><a href="/campgrounds/new">Write new Blog</a></i></b>
+        </p>
+    </div>
+    <ul style="padding-left: 0;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <% for(let blog of blogs){ %>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="https://fakeimg.pl/350x200/fafafa/000" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= blog.title %>
+                                <small class="text-muted" style="font-size: 0.7em;"> by <%= blog.author %>
+                                </small>
+                        </h5>
+                        <p class="card-text">
+                            <%= blog.description %>
+                        </p>
+                        <p class="card-text"><a href="/blogs/<%= blog._id %>">more info</a><br><small
+                                class="text-muted">
+                                <%= blog.date %>
+                            </small></p>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </ul>

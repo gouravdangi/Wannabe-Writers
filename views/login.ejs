@@ -1,0 +1,21 @@
+<% layout('/layout/boilerplate') %>
+    <form action="/new/user" method="POST" class="container col-6 border border-secondry mt-3 rounded">
+        <h1 class="mt-2">Welcome New User</h1>
+        <label for="state">Email</label>
+        <div class="input-group mb-2">
+            <input type="email" class="form-control" name="email" id="state">
+        </div>
+        <label for="title">Name</label>
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" name="username" id="name">
+        </div>
+        <label for="state">Password</label>
+        <div class="input-group mb-2">
+            <input type="password" class="form-control" name="password" id="state">
+        </div>
+        <button class="btn btn-info">Sign up</button>
+        <div class="mt-2 mb-2">
+            <b><i> <a href="/home">Go Back</a>
+                </i></b>
+        </div>
+    </form>

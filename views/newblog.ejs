@@ -1,0 +1,17 @@
+<% layout('/layout/boilerplate') %>
+    <form action="/new/blog" class="container col-6  border border-secondry mt-3 rounded" method="post">
+        <h1 class="mt-2">Write Your Blog</h1>
+        <label for="title">Title</label>
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" name="title" id="title">
+        </div>
+        <label for="description">Description</label>
+        <div class="input-group mb-3">
+            <textarea class="form-control" id="description" name="body" rows="8"></textarea>
+        </div>
+        <button class="btn btn-info">Save Blog</button>
+        <div class="mt-2 mb-2">
+            <b><i> <a href="/home">Go Back</a>
+                </i></b>
+        </div>
+    </form>

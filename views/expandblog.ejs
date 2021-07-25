@@ -1,0 +1,22 @@
+<% layout('/layout/boilerplate') %>
+    <h1>
+        <%= blg.title %>
+    </h1>
+
+    <div class="card container" style="background-color: #fafafa;">
+        <div class="card-body">
+
+            <p class=" card-text" ">
+                <%= blg.body %>
+            </p>
+        </div>
+        <div>
+            <a href=" /home">Go Back</a>
+                <a href="/campgrounds/<%= blg._id %>/edit">Edit content</a>
+        </div>
+    </div>
+    <div class="mt-3">
+        <form style="display: inline;" action="/campgrounds/<%= blg._id %>?_method=DELETE" method="post">
+            <button class="btn btn-outline-danger" type="submit">delete blog</button>
+        </form>
+    </div>
